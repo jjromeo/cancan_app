@@ -14,11 +14,11 @@
     <%= time_ago_in_words(question.created_at) %> ago by <%= question.user.email %>
     <br>
 
-    <% if  can? :update, question%>
+    <% if  can? :update, question %>
       <%= link_to 'Edit', edit_question_path(question) %>
     <% end %>
 
-    <% if  can? :destroy, question%>
+    <% if  can? :destroy, question %>
       <%= link_to 'Destroy', question, method: :delete, data: {confirm: 'Are you sure?' } %>
     <% end %>
 
